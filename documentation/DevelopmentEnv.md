@@ -16,10 +16,13 @@ It also gives credit to those who have developed the code on which I rely to do 
 
 Whereever possible I try to ensure that the code follows: 
 
-
+>
 > **[Perl Best Practices](http://shop.oreilly.com/product/9780596001735.do)**
+>
 > **Standards and Styles for Developing Maintainable Code**
+>
 > **By Damian Conway**
+>
 
 This doesn't make my coding good, but it does ensure that my poor programming is done in a consistent way!
 
