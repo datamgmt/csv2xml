@@ -19,36 +19,42 @@ If you want diagrams then you must have [Graphviz](https://www.graphviz.org/down
    
 ## Get going
 
-   * Get the code:
-   
-`git clone https://github.com/datamgmt/xml2csv.git `
-   
-   * Change into the working directory
+* Get the code:
+```
+git clone https://github.com/datamgmt/xml2csv.git
+```   
 
-`cd xml2csv`
+* Change into the working directory
+```
+cd xml2csv
+```
 
-   * Set up the environment (**Note**: There is a space between the dot '.' and the command
-   
-`. bin/setenv`
+* Set up the environment (**Note**: There is a space between the dot '.' and the command
+```  
+. bin/setenv
+```
 
-   * Add the required CPAN libraries. This script requires elevated permissions to install some standard libraries from CPAN. If you already have the required libraries this script will effectively do nothing
-      
-`sudo update_cpan`
-      
+* Add the required CPAN libraries. This script requires elevated permissions to install some standard libraries from CPAN. If you already have the required libraries this script will effectively do nothing
+```      
+sudo update_cpan
+```
+
 ## Running the code for the first time
 
 The [Microsoft book.xml](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ms762271(v%3Dvs.85)) sample file is included with the repository so we will use that to start
 
    * To run the code type
-   
-`xml2csv.pl`
+```   
+xml2csv.pl
+```
  
    * **Note:** If you chose not to install 'Graphviz' then use this command instead
-   
-`xml2csv.pl --diagram_type=none`
+```
+xml2csv.pl --diagram_type=none
+```
           
 If everything works you should see something like this:
-````
+```
 Input file 'examples/xml/books.xml' is 4286 bytes long
 Reading input file 'examples/xml/books.xml'
 Reading complete
@@ -60,7 +66,7 @@ Drawing diagram file 'diagram.dot'
 Drawing complete
 Outputing files to directory 'output'
 Outputing complete
-````
+```
 If not then please check all the pre-reqs above.
 
 ## What's happened?
@@ -81,8 +87,9 @@ The program has done the following
  You will want to try this on your own files, see what the command line options, etc. do so here are some tips:
  
   * To run your own xml file through the system do
-  
-`xml2csv.pl --load_xml_file=PATH_TO_YOUR_FILE` 
+``` 
+xml2csv.pl --load_xml_file=PATH_TO_YOUR_FILE
+```
 
 * To see what options are available from the command line (there are a lot, it's very flexible) see
 
