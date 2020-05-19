@@ -27,7 +27,7 @@ If you want diagrams then you must have [Graphviz](https://www.graphviz.org/down
 
 `cd xml2csv`
 
-   * Set up the environment (Note: There is a space between the dot '.' and the command
+   * Set up the environment (**Note**: There is a space between the dot '.' and the command
    
 `. bin/setenv`
 
@@ -49,17 +49,17 @@ The [Microsoft book.xml](https://docs.microsoft.com/en-us/previous-versions/wind
           
 If everything works you should see something like this:
 
-`Input file 'examples/xml/books.xml' is 4286 bytes long
-Reading input file 'examples/xml/books.xml'
-Reading complete
-Flattening XML into an array
-Flattening completed
-Merging XML Records
-Merging completed
-Drawing diagram file 'diagram.dot'
-Drawing complete
-Outputing files to directory 'output'
-Outputing complete`
+> Input file 'examples/xml/books.xml' is 4286 bytes long
+> Reading input file 'examples/xml/books.xml'
+> Reading complete
+> Flattening XML into an array
+> Flattening completed
+> Merging XML Records
+> Merging completed
+> Drawing diagram file 'diagram.dot'
+> Drawing complete
+> Outputing files to directory 'output'
+> Outputing complete
 
 If not then please check all the pre-reqs above.
 
