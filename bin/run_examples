@@ -1,0 +1,25 @@
+#!/bin/bash
+
+xml2csv="../xml2csv.pl"
+
+echo "Removing previous example output"
+rm -rf output
+
+for xml in `ls xml/*.xml`
+do
+   for config in `ls configs/*.yaml`
+   do
+      cfgname=`basename ${config} | cut -d\. -f1 -s`
+      xmlname=`basename ${xml} | cut -d\. -f1 -s`
+      echo "Doing xml2csv.pl with config ${config} and data ${xml}"
+      ${xml2csv} --load_config_file=${config} --load_xml_file=${xml} --save_path=output/${xmlname}/${cfgname} 2>&1
+      if [ $? -gt 0 ]
+      then
+         echo ""
+         echo ""
+         echo "ERROR: Script failed: config ${config} and data ${xml}"
+         echo ""
+         echo ""
+      fi
+   done
+done

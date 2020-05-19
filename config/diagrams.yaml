@@ -1,0 +1,161 @@
+--- 
+monochrome: 
+  columnname_record: |1-
+                   <tr>
+                      <td align="left" border="0">{$column_name}</td>
+                      <td align="left" border="0">{$column_type}</td>
+                   </tr>
+  columnname_table: |1-
+   <table border="0">
+                   <tr>
+                      <td align="left" border="0" colspan="2"><b>Columns:</b></td>
+                   </tr>
+    {$columnname_records}
+                </table>
+  data_headers: |1-
+               <tr>
+   {$data_header}                </tr>
+  data_header: |1
+                      <td align="left" border="0" bgcolor="#d0d0d0">{$column_name}</td>
+  data_record: |1
+                   <tr>
+   {$data_rows}                </tr>
+  data_row: |1
+                      <td align="left" border="0" bgcolor="#eeeeee">{$data_cell}</td>
+  data_table: |1-
+      <table border="0">
+                   <tr>
+                      <td align="left" border="0" colspan="2"><b>{$data_name}</b></td>
+                   </tr>
+       {$data_headers}
+    {$data_records}             </table>
+  graph: |1-
+    digraph G \{
+       rankdir=LR;
+       node [shape=plaintext];
+      
+      {$tables}
+   {$relationships}
+    \}
+  omitted_table: |-
+      "{$table_id}" [label=<
+         <table style="rounded, dashed">
+            <tr>
+               <td border="0" align="left">
+                  <b>Omitted Table:</b> {$omitted_tablename}
+               </td>
+            </tr>
+         </table>
+      >];
+  relationship: |1
+   "{$parent_table_id}" -> "{$table_id}";
+  surrogate: |1
+   <i>{$surrogate}</i>
+  table: |3
+      "{$table_id}" [label=<
+         <table style="rounded">
+            <tr>
+               <td border="0" align="left">
+                  {$tablename_table}
+               </td>
+            </tr>
+            <tr>
+               <td border="0" align="left">
+                  {$columnname_table}
+               </td>
+            </tr>
+            <tr>
+               <td border="0" align="left">
+               {$data_table}
+               </td>
+            </tr>
+         </table>
+      >];
+  tablename_table: |-
+      <table border="0">
+                   <tr border="0">
+                      <td align="left" border="0"><b>Table:</b></td>
+                      <td align="left" border="0">{$tablename}</td>
+                   </tr>
+                </table>
+colorful: 
+  columnname_record: |1-
+                   <tr>
+                      <td align="left" border="0" bgcolor="#d6eaf8">{$column_name}</td>
+                      <td align="left" border="0" bgcolor="#edf5fb">{$column_type}</td>
+                   </tr>
+  columnname_table: |1-
+   <table border="0">
+                   <tr>
+                      <td align="left" border="0" colspan="2"><b>Columns:</b></td>
+                   </tr>
+    {$columnname_records}
+                </table>
+  data_headers: |1-
+               <tr>
+   {$data_header}                </tr>
+  data_header: |1
+                      <td align="left" border="0" bgcolor="#d1f2eb">{$column_name}</td>
+  data_record: |1
+                   <tr>
+   {$data_rows}                </tr>
+  data_row: |1
+                      <td align="left" border="0" bgcolor="#e8f8f5">{$data_cell}</td>
+  data_table: |1-
+      <table border="0">
+                   <tr>
+                      <td align="left" border="0" colspan="2"><b>{$data_name}</b></td>
+                   </tr>
+       {$data_headers}
+    {$data_records}             </table>
+  graph: |1-
+    digraph G \{
+       rankdir=LR;
+       node [shape=plaintext];
+      
+      {$tables}
+   {$relationships}
+    \}
+  omitted_table: |-
+      "{$table_id}" [label=<
+         <table style="rounded, dashed">
+            <tr>
+               <td border="0" align="left" bgcolor="#FAD8D8">
+                  <b>Omitted Table:</b> {$omitted_tablename}
+               </td>
+            </tr>
+         </table>
+      >];
+  relationship: |1
+   "{$parent_table_id}" -> "{$table_id}";
+  surrogate: |1
+   <i>{$surrogate}</i>
+  table: |3
+      "{$table_id}" [label=<
+         <table style="rounded">
+            <tr>
+               <td border="0" align="left">
+                  {$tablename_table}
+               </td>
+            </tr>
+            <tr>
+               <td border="0" align="left">
+                  {$columnname_table}
+               </td>
+            </tr>
+            <tr>
+               <td border="0" align="left">
+               {$data_table}
+               </td>
+            </tr>
+         </table>
+      >];
+  tablename_table: |-
+      <table border="0">
+                   <tr border="0">
+                      <td align="left" border="0" bgcolor="#e8daef"><b>Table:</b></td>
+                      <td align="left" border="0" bgcolor="#f4ecf7">{$tablename}</td>
+                   </tr>
+                </table>
+
+

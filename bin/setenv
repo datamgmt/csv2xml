@@ -1,0 +1,10 @@
+#!/bin/bash
+
+CWD=`pwd`
+PRG=xml2csv.pl
+
+echo "Adding '${CWD}/bin/${PRG}' to your path"
+if [ -r "${CWD}/bin/${PRG}" ]
+then
+   export PATH=${PATH}:${CWD}/bin
+fi

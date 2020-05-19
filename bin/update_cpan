@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Updating your CPAN libraries as required"
+
+cpan install \
+   Modern::Perl\
+   Data::Dumper\
+   English\
+   File::Path\
+   File::stat\
+   Getopt::Long\
+   List::Util\
+   List::MoreUtils\
+   Path::Class\
+   Readonly\
+   Scalar::Util\
+   Text::CSV\
+   utf8::all\
+   XML::Simple\
+   YAML::XS\
+   Text::Template\
+   IPC::Open3
