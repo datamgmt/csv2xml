@@ -19,4 +19,5 @@ cpan install \
    XML::Simple\
    YAML::XS\
    Text::Template\
-   IPC::Open3
+   IPC::Open3\
+   HTML::Entities

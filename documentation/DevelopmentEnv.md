@@ -55,6 +55,7 @@ The following CPAN libraries are used
    * YAML::XS
    * Text::Template
    * IPC::Open3
+   * HTML::Entities
    
    These can be automatically installed with:
 ```
