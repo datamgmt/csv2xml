@@ -1,0 +1,26 @@
+<!-- Test file for xml2csv -->
+<testcase>
+   <!-- Test 1 - Attributes -->
+   <test attribute1="first" attribute2="second">
+   </test>
+   <!-- Test 2 - Elements -->
+   <test>
+      <element1>Element 1</element1>
+      <element2>Element 2</element2>
+   </test>
+   <!-- Test 3 - Elements and Attributes -->
+   <test attribute3="three">
+      <element3>Element 3</element3>
+   </test>
+   <!-- Test 3 - Elements and Attributes -->
+   <test attribute1="1st" attribute2="2nd" attribute3="3rd">
+      <element1>Element 1st</element1>
+      <element2>Element 2nd</element2>
+      <element3>Element 3rd</element3>
+   </test>
+   <test1>
+      <nested>Nest 1</nested>
+      <nested>Nest 2</nested>
+      <nested>Nest 3</nested>
+   </test1>      
+</testcase>

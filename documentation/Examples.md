@@ -29,6 +29,7 @@ run_examples
 If you want to see how your own XML files will look simply put them in the examples\xml directory and re-run run_examples to generate the required output
 Note: You are advised to put small sample files here to experiment as this utulity generates many different versions of the output and will take time to run
 
+
 ## Trying your own config settings
 
 If you want to try your own combination of configurations simply put a new config file in the examples\configs directory and re-run run_examples to generate the required output
