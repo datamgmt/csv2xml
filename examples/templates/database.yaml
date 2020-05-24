@@ -3,9 +3,15 @@ csv_header:
   csv: |-
     {$header}
     {$records}
+  integer: INTEGER
+  numeric: NUMERIC
+  varchar: VARCHAR
 csv_noheader:
   csv: |-
     {$records}
+  integer: INTEGER
+  numeric: NUMERIC
+  varchar: VARCHAR
 oracle:
   create: |-
     CREATE TABLE {$table} (

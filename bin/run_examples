@@ -15,7 +15,7 @@ rm -rf output
 
 for xml in `ls xml/*.xml`
 do
-   for config in `ls configs/*.yaml`
+   for config in `ls config/*.yaml`
    do
       cfgname=`basename ${config} | cut -d\. -f1 -s`
       xmlname=`basename ${xml} | cut -d\. -f1 -s`

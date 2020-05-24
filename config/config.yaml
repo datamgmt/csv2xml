@@ -19,9 +19,9 @@ indent: 3
 interval: 10
 list_templates: 0
 load_config_file: config/config.yaml
-load_diagrams_file: config/diagrams.yaml
+load_diagrams_file: templates/diagrams.yaml
 load_structure_file: ''
-load_template_file: config/database.yaml
+load_template_file: templates/database.yaml
 load_xml_file: examples/xml/books.xml
 quiet: 0
 remove_crlf: 0
