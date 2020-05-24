@@ -1,6 +1,14 @@
 #!/bin/bash
 
-xml2csv="../xml2csv.pl"
+xml2csv="xml2csv.pl"
+
+cd examples
+if [ $? -gt 0 ]
+then
+   echo "This utility must be run from the repository home directory"
+   echo "Failed to change directory to the examples directory"
+   exit 1
+fi
 
 echo "Removing previous example output"
 rm -rf output
