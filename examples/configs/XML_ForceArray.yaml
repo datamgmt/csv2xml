@@ -1,0 +1,4 @@
+---
+XML_ForceArray: 1
+load_diagrams_file: templates/diagrams.yaml
+load_template_file: templates/database.yaml

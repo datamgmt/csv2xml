@@ -1,0 +1,5 @@
+---
+substitution_string: _xml2csv
+load_diagrams_file: templates/diagrams.yaml
+load_template_file: templates/database.yaml
+

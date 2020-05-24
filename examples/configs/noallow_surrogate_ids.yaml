@@ -1,0 +1,4 @@
+---
+allow_surrogate_ids: 0
+load_diagrams_file: templates/diagrams.yaml
+load_template_file: templates/database.yaml

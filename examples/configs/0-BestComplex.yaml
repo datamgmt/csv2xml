@@ -4,25 +4,24 @@ CSV_escape_char: '"'
 CSV_quote_char: '"'
 CSV_sep_char: ','
 XML_ContentKey: -content
-XML_ForceArray: 0
-XML_ForceContent: 0
-XML_KeepRoot: 0
+XML_ForceArray: 1
+XML_ForceContent: 1
+XML_KeepRoot: 1
 XML_NoAttr: 0
 XML_NormaliseSpace: 0
 XML_SuppressEmpty: 1
+allow_file_overwrite: 1
 allow_surrogate_ids: 1
 case: lower
-diagram_template: monochrome
+diagram_template: colorful
 diagram_type: all
 graphviz_command: 'dot -Tpdf -O '
 indent: 3
-interval: 10
+interval: 0
 list_templates: 0
-load_config_file: config/config.yaml
-load_diagrams_file: config/diagrams.yaml
+load_diagrams_file: templates/diagrams.yaml
 load_structure_file: ''
-load_template_file: config/database.yaml
-load_xml_file: examples/xml/books.xml
+load_template_file: templates/database.yaml
 quiet: 0
 remove_crlf: 0
 reserved_words:
@@ -40,9 +39,7 @@ sample_size: 10
 save_config_file: saved_config.yaml
 save_counts_file: saved_counts.txt
 save_diagram_file: diagram.dot
-save_path: output
 save_structure_file: saved_structure.yaml
 substitution_string: _x2c
-surrogate_id: _x2c_id
 template: postgres
 verbose: 3

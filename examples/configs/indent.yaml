@@ -1,0 +1,4 @@
+---
+indent: 10
+load_diagrams_file: templates/diagrams.yaml
+load_template_file: templates/database.yaml

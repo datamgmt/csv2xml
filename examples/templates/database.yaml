@@ -1,0 +1,106 @@
+---
+csv_header:
+  csv: |-
+    {$header}
+    {$records}
+csv_noheader:
+  csv: |-
+    {$records}
+oracle:
+  create: |-
+    CREATE TABLE {$table} (
+       {$columns});
+  csv: |-
+    {$header}
+    {$records}
+  drop: |-
+    DROP TABLE {$table};
+  integer: INTEGER
+  load: |-
+    LOAD DATA
+    INFILE '{$datafile}'
+    APPEND
+    INTO TABLE {$table}
+    FIELDS DELIMITED BY "{$delimiter}"
+    OPTIONALLY ENCLOSED BY '"'
+    TRAILING NULLCOLS
+    SKIP 1
+    ( {$header} )
+  loadext: 'ctl'
+  numeric: NUMBER
+  run: |-
+    @{$script}
+  runscript: run_all_scripts.sql
+  pelt: |-
+    command:oracle_alias:{$script}:
+  peltscript: run_all_scripts.idx
+  varchar: VARCHAR2
+postgres:
+  create: |-
+    /*
+    {$comments}
+    */
+
+    CREATE TABLE {$table} (
+    {$columns});
+  csv: |-
+    {$header}
+    {$records}
+  drop: |-
+    /*
+    {$comments}
+    */
+
+    DROP TABLE IF EXISTS {$table};
+  integer: INTEGER
+  load: |-
+    /*
+    {$comments}
+    */
+
+    \COPY {$table} FROM '{$datafile}' DELIMITER '{$delimiter}' CSV HEADER;
+  numeric: NUMERIC
+  run: |-
+    \I {$script}
+  runscript: run_all_scripts.sql
+  pelt: |-
+    command:postgres_alias:{$script}:
+  peltscript: run_all_scripts.idx
+  varchar: VARCHAR
+mysql:
+  create: |-
+    /*
+    {$comments}
+    */
+
+    CREATE TABLE {$table} (
+    {$columns});
+  csv: |-
+    {$header}
+    {$records}
+  drop: |-
+    /*
+    {$comments}
+    */
+
+    DROP TABLE IF EXISTS {$table};
+  integer: INT
+  load: |-
+    /*
+    {$comments}
+    */
+
+    LOAD DATA LOCAL INFILE '{$datafile}'
+    INTO TABLE {$table} 
+    FIELDS TERMINATED BY '{$delimiter}'
+    ENCLOSED BY '"'
+    LINES TERMINATED BY '\n'
+    IGNORE 1 ROWS;
+  numeric: FLOAT
+  run: |-
+    source {$script}
+  runscript: run_all_scripts.sql
+  pelt: |-
+    command:mysql_alias:{$script}:
+  peltscript: run_all_scripts.idx
+  varchar: VARCHAR
