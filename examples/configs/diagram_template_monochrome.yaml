@@ -1,4 +1,4 @@
 ---
-diagram_template: monchrome
+diagram_template: monochrome
 load_diagrams_file: templates/diagrams.yaml
 load_template_file: templates/database.yaml
