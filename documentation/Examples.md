@@ -13,14 +13,14 @@ run_examples
 ## Examples directory Structure
 
 ```
-\                                  # Root of the whole git project
-\bin                               # Directory where xml2csv.pl and run_examples live
-\examples                          # Root of the directory structure
-\examples\configs                  # The configuration files to be used to generate the examples
-\examples\output                   # The root of where the output from running the examples will be stored
-\examples\output{xmlfile}\{config} # Output from running xml2csv.pl on {xmlfile} using {config} configuration
-\examples\templates                # The template files to be used to generate the examples
-\examples\xml                      # The xml files to be used to generate the examples
+\                                   # Root of the whole git project
+\bin                                # Directory where xml2csv.pl and run_examples live
+\examples                           # Root of the directory structure
+\examples\configs                   # The configuration files to be used to generate the examples
+\examples\output                    # The root of where the output from running the examples will be stored
+\examples\output\{xmlfile}\{config} # Output from running xml2csv.pl on {xmlfile} using {config} configuration
+\examples\templates                 # The template files to be used to generate the examples
+\examples\xml                       # The xml files to be used to generate the examples
 
 ```
 
